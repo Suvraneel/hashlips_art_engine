@@ -7,7 +7,7 @@ const network = NETWORK.eth;
 // General metadata for Ethereum
 const namePrefix = "OpenSorcerer";
 const description = "Exclusive OpenSorcerer NFT Collection";
-const baseUri = "ipfs://NewUriToReplace";
+const baseUri = "ipfs://QmPNcGSLmnhJB4qLVCtugLtt75ZVkAWjfv3ubDB3QNXeve";
 
 const solanaMetadata = {
   symbol: "YC",
@@ -24,7 +24,15 @@ const solanaMetadata = {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 50,
+    layersOrder: [
+      { name: "Attire" },
+      { name: "Posture" },
+      { name: "Protagonist Face" },
+    ],
+  },
+  {
+    growEditionSizeTo: 150,
     layersOrder: [
       { name: "Background" },
       { name: "Attire" },
@@ -34,7 +42,7 @@ const layerConfigurations = [
   },
 ];
 
-const shuffleLayerConfigurations = false;
+const shuffleLayerConfigurations = true;
 
 const debugLogs = false;
 
@@ -70,7 +78,7 @@ const pixelFormat = {
 
 const background = {
   generate: true,
-  brightness: "80%",
+  brightness: "30%",
   static: false,
   default: "#000000",
 };
